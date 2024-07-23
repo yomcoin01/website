@@ -1,5 +1,5 @@
 import { hero1, hero2, hero3, partColl } from "../../assets"
-import { keyData, WhyConst } from "../../data/data"
+import {  WhyConst } from "../../data/data"
 import { BtnCard } from "../../utils"
 import { Footer, Navbar } from "../components"
 
