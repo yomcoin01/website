@@ -1,4 +1,5 @@
-import { hero1, hero2, hero3, partColl } from "../../assets"
+import { FaArrowAltCircleRight } from "react-icons/fa"
+import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
 import { BtnCard } from "../../utils"
 import { Footer, Navbar } from "../components"
@@ -9,16 +10,21 @@ const HomePg = () => {
     <div>
         <Navbar />
         <div className="container">
-            <div className="text-center flex flex-col gap-6 items-center py-8">
+            {/* <div className="absolute top-10 left-0"> */}
+                <img src={herotopbg} alt="" className=" w-60 h-60 absolute top-10 inset-x-1/2  opacity-50 " />
+                <img src={herobgleft} alt="" className=" w-30 h-30 absolute top-60 left-10 opacity-70 " />
+                <img src={herobgright} alt="" className=" w-30 h-30 absolute top-60 right-10 opacity-70 " />
+            {/* </div> */}
+            <div className="text-center flex flex-col gap-6 items-center py-8 z-50">
               <p className="text-5xl font-[700] w-3/4">Bridging Finance and Technology for a Smarter Future</p>
             <p>Revolutionizing Cross-Border Transactions with Seamless, Secure, and Efficient Solutions</p>  
 
             <div className="bg-[#909AA81A] flex flex-row gap-4 justify-between items-center  p-2 rounded-full">
-            <div className="flex flex-row gap-1">
-                <img src={hero1} className="h-12 w-12 rounded-full" alt="" />
-                <img src={hero2} className="h-12 w-12 rounded-full" alt="" />
-                <img src={hero3} className="h-12 w-12 rounded-full"  alt="" />
-                <div className="bg-white text-center w-12 h-12 rounded-full">
+            <div className="flex flex-row relative">
+                <img src={hero1} className="h-12 w-12 rounded-full " alt="" />
+                <img src={hero2} className="h-12 w-12 rounded-full z-10 absolute right-16" alt="" />
+                <img src={hero3} className="h-12 w-12 rounded-full z-20 "  alt="" />
+                <div className="bg-white text-center w-12 h-12 z-30 flex items-center rounded-full">
                     <p>+23</p>
                 </div>
             </div>
@@ -28,8 +34,11 @@ const HomePg = () => {
             
         </div>
         {/* Why Yomcoin */}
+        <div className="bg-whysbrgt bg-right-top bg-contain bg-no-repeat">
         <div className="container">
-            <div className="flex justify-center items-center">
+          <div className="">
+            {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
+            <div className="flex justify-center items-center py-12">
                 <div className="w-1/2 text-center">
              <p className="">Why Yomcoin?</p>
 
@@ -37,9 +46,9 @@ const HomePg = () => {
             </div>
             </div>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-8 py-12 px-4">
+           <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-8 py-12 px-4 z-50">
             {WhyConst.map((item) => (
-             <div className="bg-transparent justify-start items-start flex flex-col gap-6 px-8 py-12 border border-white rounded-xl h-[400px]" key={item.id}>
+             <div className="bg-transparent justify-start items-start flex flex-col gap-6 px-8 py-12 border border-e-cyan-300 rounded-xl h-[400px]" key={item.id}>
                 <div>
                 <img src={item.img} alt="" />
                 </div>
@@ -51,12 +60,21 @@ const HomePg = () => {
             
             </div> 
            
+        </div>  
         </div>
+        </div>
+        
+        <div className="bg-whysblft bg-left-bottom bg-contain bg-no-repeat">
         {/* Our Key Features */}
         <div className="container">
             <div className="flex justify-center items-center">
                 <div className="w-1/2 text-center">
                 <p>Features</p>
+                {/* <h1
+  className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
+>
+  Tailwind CSS
+</h1> */}
                 <p className="font-[700] text-5xl text-center">Our Key Features</p>
                 </div>
             </div>
@@ -101,6 +119,24 @@ const HomePg = () => {
                 </div>
             </div>
         </div>
+        </div>
+        
+
+        <div className="container py-24">
+          <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center bg-transparent gap-12">
+                <div className="flex flex-row items-center gap-2 bg-transparent">
+                    <img src={commside} alt="" />
+                    <h3 className="text-5xl font-[700]">Community and Support</h3>
+                </div>
+                <div className="bg-transparent">
+                    <p>We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts.</p>
+                    <button>Join Now <FaArrowAltCircleRight /> </button>
+                </div>
+            </div>
+        </div> 
+        </div>
+        
         <Footer />
     </div>
   )

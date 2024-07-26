@@ -28,21 +28,21 @@ const Footer = () => {
                 </div>
                 <div>
                     <div className="grid grid-cols-3 gap-3 items-start">
-                        <div><p>Company</p>
+                        <div><p className="font-[600] text-xl pb-4">Company</p>
                         <ul>
                             {complinks.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                         </div>
-                        <div><p>Resources</p>
+                        <div><p className="font-[600] text-xl pb-4">Resources</p>
                         <ul>
                             {reslinks.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                         </div>
-                        <div><p>Partnership</p>
+                        <div><p className="font-[600] text-xl pb-4">Partnership</p>
                         <ul>
                             {partlinks.map((item, index) => (
                                 <li key={index}>{item}</li>

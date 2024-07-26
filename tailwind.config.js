@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        whysbrgt: "url('assets/sbgright.png')",
+        whysblft: "url('assets/sbgleft.png')"
+      },
       colors: {
         primary: "#630460",
         second: "#AB79FF"
