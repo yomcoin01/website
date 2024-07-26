@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { yomlogo } from "../../assets"
+import { useState } from "react"
+import { FaBars, FaTimes } from "react-icons/fa";
 
 
 const Navbar = () => {
+
+    const [isOpen, setIsOpen] = useState(false);
+
+
     const NavLinks = [
         {
             id: 1,
@@ -17,23 +23,51 @@ const Navbar = () => {
         {
             id: 3,
             text: "Partherships",
-            link: "/parther"
+            link: "/partner"
         }
     ]
+
+    const activeLink = "text-primary font-[700]"
+    const normalLink = "text-white font-[700]"
+
   return (
     <div>
         <div className="container">
-            <div className="flex flex-row justify-between items-center py-4">
+            <div className="flex justify-between items-center py-4">
+                <div className="flex w-full flex-row justify-between items-center">
                 <Link to="/" className="flex flex-row gap-2 items-center">
                     <img src={yomlogo} alt="" />
                     <p className="font-[800] text-2xl">Yomcoin</p>
                 </Link>
-              <div className="flex flex-row gap-3 items-center">
+                <div className="md:hidden cursor-pointer flex items-center" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <FaTimes size={28}/> : <FaBars size={28}/>}
+                </div>
+                </div>
+                
+              <div className="hidden md:flex flex-row gap-3 items-center">
                 {NavLinks.map((item) => (
+                <NavLink key={item.id} to={item.link} className={({isActive}) => (isActive ? activeLink : normalLink)}>
+                    {item.text}
+                </NavLink>    
+                ))}
+                
+            </div>  
+            {/* Mobile Nav */}
+            <div className={`md:hidden bg-[#0E0D17] text-[#fff] fixed z-50 w-full top-0 overflow-y-auto bottom-0 pt-12 pl-4
+        duration-500 ${isOpen ? "left-0" : "left-[-100%]"}`}>
+
+        
+            <div  className="cursor-pointer absolute right-10 flex items-center"><FaTimes size={28} onClick={() => setIsOpen(false)}/></div>
+
+
+            <div className="flex flex-col justify-center items-center pt-24 gap-8">
+            {NavLinks.map((item) => (
                 <div key={item.id} >
-                    <Link to={item.link}>{item.text}</Link>
+                    <Link to={item.link} className="font-[600]">{item.text}</Link>
                 </div>    
                 ))}
+            </div>
+                
                 
             </div>  
             </div>

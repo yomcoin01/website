@@ -1,7 +1,19 @@
 import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
-import { AboutPg, HomePg } from './pages'
+import { AboutPg, HomePg, PartnerPg } from './pages'
+import AOS from "aos"
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() =>{
+    AOS.init({
+      offset: 200,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+  })
 
   function Root() {
     return(
@@ -9,6 +21,7 @@ function App() {
         <Routes>
         <Route path='/' element={<HomePg />} />
         <Route path='/about' element={<AboutPg />} />
+        <Route path='/partner' element={<PartnerPg />} />
       </Routes>
       </div>
       

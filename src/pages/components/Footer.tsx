@@ -26,23 +26,22 @@ const Footer = () => {
                     <FaYoutube size={33}/>
                 </div>
                 </div>
-                <div>
-                    <div className="grid grid-cols-3 gap-3 items-start">
-                        <div><p className="font-[600] text-xl pb-4">Company</p>
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-start">
+                        <div><p className="font-[600] text-xl pb-0 md:pb-4">Company</p>
                         <ul>
                             {complinks.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                         </div>
-                        <div><p className="font-[600] text-xl pb-4">Resources</p>
+                        <div><p className="font-[600] text-xl pb-0 md:pb-4">Resources</p>
                         <ul>
                             {reslinks.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
                         </div>
-                        <div><p className="font-[600] text-xl pb-4">Partnership</p>
+                        <div><p className="font-[600] text-xl pb-0 md:pb-4">Partnership</p>
                         <ul>
                             {partlinks.map((item, index) => (
                                 <li key={index}>{item}</li>
@@ -50,7 +49,6 @@ const Footer = () => {
                         </ul>
                         </div>
                     </div>
-                </div>
             </div>
             <hr />
             <p className="text-center py-4">© 2024 Yomcoin. All rights reserved. </p>

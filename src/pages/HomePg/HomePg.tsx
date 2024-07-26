@@ -1,13 +1,27 @@
 import { FaArrowAltCircleRight } from "react-icons/fa"
 import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
-import { BtnCard } from "../../utils"
+import { BtnCard, PreLoader } from "../../utils"
 import { Footer, Navbar } from "../components"
+import { useEffect, useState } from "react"
+
 
 
 const HomePg = () => {
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+          setLoading(false)
+        }, 2000)
+      }, [])
   return (
-    <div>
+    <>
+    {loading ? (
+        <PreLoader />
+    ):(
+        <div>
         <Navbar />
         <div className="container">
             {/* <div className="absolute top-10 left-0"> */}
@@ -16,10 +30,10 @@ const HomePg = () => {
                 <img src={herobgright} alt="" className=" w-30 h-30 absolute top-60 right-10 opacity-70 " />
             {/* </div> */}
             <div className="text-center flex flex-col gap-6 items-center py-8 z-50">
-              <p className="text-5xl font-[700] w-3/4">Bridging Finance and Technology for a Smarter Future</p>
-            <p>Revolutionizing Cross-Border Transactions with Seamless, Secure, and Efficient Solutions</p>  
+              <p className="text-2xl md:text-5xl font-[700] w-3/4" data-aos="zoom-in-up">Bridging Finance and Technology for a Smarter Future</p>
+            <p data-aos="zoom-in-up">Revolutionizing Cross-Border Transactions with Seamless, Secure, and Efficient Solutions</p>  
 
-            <div className="bg-[#909AA81A] flex flex-row gap-4 justify-between items-center  p-2 rounded-full">
+            <div className="bg-[#909AA81A] flex flex-row gap-4 justify-between items-center  p-2 rounded-full" data-aos="zoom-in-up">
             <div className="flex flex-row relative">
                 <img src={hero1} className="h-12 w-12 rounded-full " alt="" />
                 <img src={hero2} className="h-12 w-12 rounded-full z-10 absolute right-16" alt="" />
@@ -39,10 +53,10 @@ const HomePg = () => {
           <div className="">
             {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
             <div className="flex justify-center items-center py-12">
-                <div className="w-1/2 text-center">
-             <p className="">Why Yomcoin?</p>
+                <div className="w-3/4 text-center">
+             <p className="" data-aos="fade-up">Why Yomcoin?</p>
 
-             <p className="font-[700] text-5xl text-center">Why We Stand Out Among Cryptocurrencies</p>
+             <p data-aos="fade-up" className="font-[700] text-2xl md:text-5xl text-center">Why We Stand Out Among Cryptocurrencies</p>
             </div>
             </div>
 
@@ -68,14 +82,14 @@ const HomePg = () => {
         {/* Our Key Features */}
         <div className="container">
             <div className="flex justify-center items-center">
-                <div className="w-1/2 text-center">
+                <div className="w-full md:w-1/2 text-center">
                 <p>Features</p>
                 {/* <h1
   className="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
 >
   Tailwind CSS
 </h1> */}
-                <p className="font-[700] text-5xl text-center">Our Key Features</p>
+                <p className="font-[700] text-2xl md:text-5xl text-center">Our Key Features</p>
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-8 py-16 px-4">
@@ -105,8 +119,8 @@ const HomePg = () => {
         <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8">
                 <div className="flex flex-col gap-4">
-                    <p>Partnerships and collaborations</p>
-                    <h3 className="text-5xl font-[700]">Why Partner with Yomcoin?</h3>
+                    <p className="text-center md:text-start">Partnerships and collaborations</p>
+                    <h3 className="text-2xl md:text-5xl font-[700]">Why Partner with Yomcoin?</h3>
                     <p>We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                     <div className="flex flex-row gap-4 items-center">
                     <BtnCard btnbgColor="primary" btnText="Join Us"  btnClass="" />
@@ -114,7 +128,9 @@ const HomePg = () => {
 
                     </div>
                 </div>
-                <div>
+                <div className="relative">
+          <img src={commside} alt=""  className="w-12 md:w-24 h-12 md:h-24 absolute -top-4 md:-top-10 -left-4 md:-left-10"/>
+
                     <img src={partColl} alt="" />
                 </div>
             </div>
@@ -122,16 +138,17 @@ const HomePg = () => {
         </div>
         
 
-        <div className="container py-24">
-          <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center bg-transparent gap-12">
+        <div className="container py-24 relative">
+          <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl py-12">
+          <img src={commside} alt=""  className="w-24 h-24 absolute top-12 left-2"/>
+            <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center bg-transparent gap-12 px-8">
                 <div className="flex flex-row items-center gap-2 bg-transparent">
-                    <img src={commside} alt="" />
+                    
                     <h3 className="text-5xl font-[700]">Community and Support</h3>
                 </div>
                 <div className="bg-transparent">
                     <p>We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts.</p>
-                    <button>Join Now <FaArrowAltCircleRight /> </button>
+                    <button className="flex flex-row gap-2 items-center">Join Now <FaArrowAltCircleRight /> </button>
                 </div>
             </div>
         </div> 
@@ -139,6 +156,9 @@ const HomePg = () => {
         
         <Footer />
     </div>
+    )}
+    </>
+    
   )
 }
 

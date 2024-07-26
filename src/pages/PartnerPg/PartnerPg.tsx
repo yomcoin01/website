@@ -1,21 +1,21 @@
-import { underConstruction } from "../../assets";
-import { PreLoader } from "../../utils";
+import { useEffect, useState } from "react"
 import { Navbar } from "../components"
-import { useState, useEffect } from "react";
+import { underConstruction } from "../../assets"
+import { PreLoader } from "../../utils";
 
+const PartnerPg = () => {
+    const [loading, setLoading] = useState(true);
 
-const AboutPg = () => {
-  const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+          setLoading(false)
+        }, 2000)
+      }, [])
 
-  useEffect(() => {
-      setTimeout(() => {
-        setLoading(false)
-      }, 2000)
-    }, [])
+    useEffect(() => {
+        document.title = "Yomcoin | Pathnership"
+      }, [])
 
-  useEffect(() => {
-      document.title = "Yomcoin | About"
-    }, [])
   return (
     <>
     {loading ? (
@@ -32,7 +32,8 @@ const AboutPg = () => {
     </div>
     )}
     </>
+    
   )
 }
 
-export default AboutPg
+export default PartnerPg

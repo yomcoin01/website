@@ -12,3 +12,4 @@ export {default as herobgleft} from "./herobgleft.png";
 export {default as sbgleft} from "./sbgleft.png";
 export {default as sbgright} from "./sbgright.png";
 export {default as commside} from "./commside.png";
+export {default as underConstruction} from "./undraw_under_construction_-46-pa.svg";
