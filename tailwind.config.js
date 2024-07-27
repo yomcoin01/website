@@ -12,7 +12,9 @@ export default {
       },
       colors: {
         primary: "#630460",
-        second: "#AB79FF"
+        second: "#AB79FF",
+        txtCol: "#909DAD",
+        txtHead: "#F9FAFB"
       },
       container: {
         center: true,

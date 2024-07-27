@@ -1,8 +1,7 @@
-import { FaArrowAltCircleRight } from "react-icons/fa"
 import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
 import { BtnCard, PreLoader } from "../../utils"
-import { Footer, Navbar } from "../components"
+import { Footer, Navbar, SubFooter } from "../components"
 import { useEffect, useState } from "react"
 
 
@@ -50,11 +49,11 @@ const HomePg = () => {
         {/* Why Yomcoin */}
         <div className="bg-whysbrgt bg-right-top bg-contain bg-no-repeat">
         <div className="container">
-          <div className="">
+          <div>
             {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
             <div className="flex justify-center items-center py-12">
                 <div className="w-3/4 text-center">
-             <p className="" data-aos="fade-up">Why Yomcoin?</p>
+             <p data-aos="fade-up">Why Yomcoin?</p>
 
              <p data-aos="fade-up" className="font-[700] text-2xl md:text-5xl text-center">Why We Stand Out Among Cryptocurrencies</p>
             </div>
@@ -138,7 +137,7 @@ const HomePg = () => {
         </div>
         
 
-        <div className="container py-24 relative">
+        {/* <div className="container py-24 relative">
           <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl py-12">
           <img src={commside} alt=""  className="w-24 h-24 absolute top-12 left-2"/>
             <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center bg-transparent gap-12 px-8">
@@ -152,7 +151,9 @@ const HomePg = () => {
                 </div>
             </div>
         </div> 
-        </div>
+        </div> */}
+        
+        <SubFooter title="Community and Support"/>
         
         <Footer />
     </div>

@@ -13,3 +13,10 @@ export {default as sbgleft} from "./sbgleft.png";
 export {default as sbgright} from "./sbgright.png";
 export {default as commside} from "./commside.png";
 export {default as underConstruction} from "./undraw_under_construction_-46-pa.svg";
+export {default as whyPartImg} from "./Frame 6222.png";
+export {default as accPart} from "./Frame 6223.png";
+export {default as jointPart} from "./Frame 6227.png";
+export {default as enhaPart} from "./Frame 6229.png";
+export {default as marPart} from "./Frame 6228.png"
+export {default as heroPartOne} from "./Frame 6220.png";
+export {default as heroPartTwo} from "./Frame 6219.png";
