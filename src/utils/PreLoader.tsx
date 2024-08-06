@@ -6,9 +6,9 @@ const PreLoader = () => {
   return (
     <div className="h-screen w-full bg-[#0E0D17] flex justify-center items-center">
         <div className="flex flex-col items-center justify-center">
-        <div  className="flex flex-row gap-2 items-center">
+        <div  className="flex flex-row items-center">
                     <img src={yomlogo} alt="" />
-                    <p className="font-[800] text-2xl md:text-4xl">Yomcoin</p>
+                    <p className="font-[800] text-2xl md:text-4xl" style={{lineHeight: "30px"}}>Yomcoin</p>
                 </div>
     <ThreeDots color="#630460"/>
             

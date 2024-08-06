@@ -20,3 +20,4 @@ export {default as enhaPart} from "./Frame 6229.png";
 export {default as marPart} from "./Frame 6228.png"
 export {default as heroPartOne} from "./Frame 6220.png";
 export {default as heroPartTwo} from "./Frame 6219.png";
+export {default as yomCoinPDF} from "./yomCOIN WHITEPAPER.pdf";

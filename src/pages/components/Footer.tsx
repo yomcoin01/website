@@ -1,11 +1,23 @@
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa6"
-import { yomlogo } from "../../assets"
+import { yomCoinPDF, yomlogo } from "../../assets"
+import { Link } from "react-router-dom"
 
 
 const Footer = () => {
 
     const complinks = ["About", "Mission", "Vision"]
-    const reslinks = ["Pitch deck", "Whitepaper"]
+    const reslinks = [
+        {
+            id: 1,
+        text: "Pitch deck",
+        link: "/"
+        },
+        {
+            id: 2,
+            text: "Whitepaper",
+            link: yomCoinPDF
+        }
+    ]
     const partlinks = ["Partner with us"]
 
   return (
@@ -35,11 +47,14 @@ const Footer = () => {
                         </ul>
                         </div>
                         <div><p className="font-[600] text-xl pb-0 md:pb-4">Resources</p>
-                        <ul>
+                        <div>
                             {reslinks.map((item, index) => (
-                                <li key={index} className="text-txtCol text-md font-[500]">{item}</li>
+                                <div key={index}>
+                                    <Link to={item.link} target="_blank"  className="text-txtCol text-md font-[500]">{item.text}</Link>
+                                </div>
+                                
                             ))}
-                        </ul>
+                        </div>
                         </div>
                         <div><p className="font-[600] text-xl pb-0 md:pb-4">Partnership</p>
                         <ul>
@@ -51,7 +66,7 @@ const Footer = () => {
                     </div>
             </div>
             <hr />
-            <p className="text-center py-4">© 2024 Yomcoin. All rights reserved. </p>
+            <p className="text-center md:py-4 py-2">© 2024 Yomcoin. All rights reserved. </p>
         </div>
     </div>
   )

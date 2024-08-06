@@ -36,8 +36,8 @@ const Navbar = () => {
             <div className="flex justify-between items-center py-4">
                 <div className="flex w-full flex-row justify-between items-center">
                 <Link to="/" className="flex flex-row gap-2 items-center">
-                    <img src={yomlogo} alt="" />
-                    <p className="font-[800] text-2xl">Yomcoin</p>
+                    <img src={yomlogo} alt="" className="w-8 md:w-12 h-8 md:h-12"/>
+                    <p className="font-[800] md:text-2xl text-lg">Yomcoin</p>
                 </Link>
                 <div className="md:hidden cursor-pointer flex items-center" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <FaTimes size={28}/> : <FaBars size={28}/>}
