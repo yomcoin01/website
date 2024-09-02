@@ -59,7 +59,7 @@ const Footer = () => {
                         <div><p className="font-[600] text-xl pb-0 md:pb-4">Partnership</p>
                         <ul>
                             {partlinks.map((item, index) => (
-                                <li key={index} className="text-txtCol text-md font-[500]">{item}</li>
+                                <Link target="_blank" to="https://forms.gle/y46WMkypRmkLaQAe7" key={index} className="text-txtCol text-md font-[500]">{item}</Link>
                             ))}
                         </ul>
                         </div>

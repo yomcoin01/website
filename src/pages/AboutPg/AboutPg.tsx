@@ -1,5 +1,5 @@
 import { FaAngleRight } from "react-icons/fa";
-import { heroPartOne, heroPartTwo} from "../../assets";
+import { abtFirst, abtsecond} from "../../assets";
 import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components"
 import { useState, useEffect } from "react";
@@ -25,34 +25,38 @@ const AboutPg = () => {
         <div>
         <Navbar />
         <div className="container pt-16">
-        <h3>About</h3>
+        <h3 className="text-4xl font-[700]">About</h3>
               <div className="flex flex-row items-center gap-2 justify-start py-6">
-                <p>Home</p>
+                <p className="text-primary font-[600]">Home</p>
                 <FaAngleRight />
-                <p>About</p>
+                <p className="text-primary font-[600]">About</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-24">
+              <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-0">
                 <div>
-                  <p>About Us</p>
+                  <p className="text-primary font-[600]">About Us</p>
                   <h3 className="text-start text-[48px] font-[700] py-8" style={{lineHeight: "50px"}}>Innovating DeFi with User-Centric Solutions</h3>
                   <p className="text-txtCol">Yomcoin is a leading platform in the decentralized finance (DeFi) space, committed to driving innovation and positive change in the financial industry. We are a team of passionate individuals dedicated to leveraging cutting-edge technology to transform the way individuals access and utilize financial services. 
                   With a focus on user-centric design, security, and accessibility, we strive to empower users worldwide to take control of their financial futures.</p>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2">
 
-                  <img src={heroPartOne} alt="" className="w-full" />
-                  <img src={heroPartTwo} alt="" className="w-full"/>
+                  <img src={abtsecond} alt="" className="w-full h-[400px] mt-20 rounded-xl" />
+                  <img src={abtFirst} alt="" className="w-full h-[400px] rounded-xl"/>
              
                   
                 </div>
               </div>
-              <div className="w-full md:w-1/2 text-center mx-auto">
-                <p>Technology</p>
+              
+              
+              
+        </div>
+        <div className="bg-abtechbg bg-right-top bg-no-repeat" style={{backgroundSize: "500px 700px"}}>
+        <div className="w-full md:w-1/2 text-center mx-auto pt-24">
+                <p className="text-primary font-[600] text-2xl">Technology</p>
                 <h3 className="text-2xl md:text-5xl font-[700] py-4">Our Technology</h3>
                 <p className="text-txtCol text-sm font-[500]">Yomcoin is built on a robust and secure blockchain infrastructure, ensuring transparency and integrity in every transaction. Our technology stack includes:</p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3  justify-center items-start gap-8 py-16 w-3/4 mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3  justify-center items-start gap-8 py-16 w-3/4 mx-auto">
             <div className="flex flex-col gap-3">
                 <p className="text-second font-[700] text-5xl pb-2">.01</p>
                 <h3 className="text-2xl font-[700]">Blockchain</h3>

@@ -8,7 +8,11 @@ export default {
     extend: {
       backgroundImage: {
         whysbrgt: "url('assets/sbgright.png')",
-        whysblft: "url('assets/sbgleft.png')"
+        whysblft: "url('assets/sbgleft.png')",
+        abtechbg: "url('assets/abtechbg.png')"
+      },
+      backgroundSize: {
+        xlarge: "500px"
       },
       colors: {
         primary: "#630460",

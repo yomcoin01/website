@@ -21,3 +21,6 @@ export {default as marPart} from "./Frame 6228.png"
 export {default as heroPartOne} from "./Frame 6220.png";
 export {default as heroPartTwo} from "./Frame 6219.png";
 export {default as yomCoinPDF} from "./yomCOIN WHITEPAPER.pdf";
+export {default as abtFirst} from "./abtfirst.png";
+export {default as abtsecond} from "./abtsecond.png";
+export {default as abtechbg} from "./abtechbg.png";

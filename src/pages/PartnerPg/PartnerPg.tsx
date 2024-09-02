@@ -15,7 +15,7 @@ const PartnerPg = () => {
       }, [])
 
     useEffect(() => {
-        document.title = "Yomcoin | Pathnership"
+        document.title = "Yomcoin | Partnership"
       }, [])
 
   return (
@@ -32,25 +32,28 @@ const PartnerPg = () => {
             </div>
             <p className="text-2xl md:text-5xl text-center">Under <span className="text-primary">Construction</span></p> */}
             <div>
-              <h3>Partnership</h3>
+              <h3 className="text-4xl font-[700]">Partnership</h3>
               <div className="flex flex-row items-center gap-2 justify-start py-6">
-                <p>Home</p>
+                <p className="text-primary font-[600]">Home</p>
                 <FaAngleRight />
-                <p>Partnership</p>
+                <p className="text-primary font-[600]">Partnership</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-24">
                 <div>
-                  <p>Partnership & Collaboration</p>
+                  <p className="text-primary font-[600]">Partnership & Collaboration</p>
                   <h3 className="text-start text-[48px] font-[700] py-8" style={{lineHeight: "50px"}}>Partner with Yomcoin to Innovate</h3>
-                  <p className="text-txtCol">Yomcoin is open to partnerships and collaborations with businesses to expand the Yomcoin ecosystem and provide greater value to our users. We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
+                  <p className="text-txtCol font-[500]">Yomcoin is open to partnerships and collaborations with businesses to expand the Yomcoin ecosystem and provide greater value to our users. We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                 </div>
+                <div>
                 <div className="relative">
                   <div >
-                  <img src={heroPartOne} alt="" className="absolute z-20 w-[400px] h-[400px] " style={{top: "-220px", left: "0px"}} />
-                  <img src={heroPartTwo} alt="" className="absolute right-0 w-[250px] h-[250px]"/>
+                  <img src={heroPartOne} alt="" className="md:absolute static md:z-20 z-0 w-[400px] h-[400px] " style={{top: "-220px", left: "0px"}} />
+                  <img src={heroPartTwo} alt="" className="absolute md:block hidden right-0 w-[250px] h-[250px]"/>
                   </div>
                   
                 </div>
+                </div>
+                
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4">
               <div>
