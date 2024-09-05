@@ -36,7 +36,12 @@ const AboutPg = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-0">
                 <div>
-                  <p className="text-primary font-[600]">About Us</p>
+                  <p className="font-[600] text-xl">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+
+                  About Us
+                  </span>
+                  </p>
                   <h3 className="text-start text-[48px] font-[700] py-8" style={{lineHeight: "50px"}}>Innovating DeFi with User-Centric Solutions</h3>
                   <p className="text-txtCol">Yomcoin is a leading platform in the decentralized finance (DeFi) space, committed to driving innovation and positive change in the financial industry. We are a team of passionate individuals dedicated to leveraging cutting-edge technology to transform the way individuals access and utilize financial services. 
                   With a focus on user-centric design, security, and accessibility, we strive to empower users worldwide to take control of their financial futures.</p>

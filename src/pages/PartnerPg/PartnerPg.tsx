@@ -40,7 +40,7 @@ const PartnerPg = () => {
                 </span>
                 </h3>
               <div className="">
-                <p className="text-2xl">
+                <p className="md:text-2xl text-lg">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF] flex flex-row gap-4 items-center pt-2">
                   Home <FaAngleRight fill="#fff" />Partnerships 
                 </span>
@@ -74,8 +74,13 @@ const PartnerPg = () => {
                 <img src={whyPartImg} alt="" />
               </div>
               <div>
-                <p>Why Choose Us</p>
-                <h3 className="text-3xl font-[700] py-6">Why Partner with <br /> Yomcoin?</h3>
+                <p className="font-[600] text-xl">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+                Why Choose Us
+                </span>
+                  
+              </p>
+                <h3 className="text-start md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8">Why Partner with <br /> Yomcoin?</h3>
                 <p className="text-txtCol text-sm font-[500]">Collaborate with us to drive mutual growth and success. Our partnership approach is centered on innovation and shared goals, ensuring that both parties benefit from the collaboration.</p>
                 <div className="grid grid-cols-2 justify-start items-start gap-4 pt-6">
                   {whyPartData.map((item) => (
@@ -96,9 +101,14 @@ const PartnerPg = () => {
               </div>
             </div>
             <div className="md:py-12 py-4">
-              <p className="text-center">Partner</p>
+              <p className="font-[600] text-xl text-center">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+              Partner
+              </span>
+
+              </p>
               <div className="w-full md:w-1/2 mx-auto">
-                <h3 className="text-center md:text-[48px] text-[30px] font-[700] md:py-8 py-2 md:leading-[50px] leading-8" style={{lineHeight: "50px"}}>Types of Partnerships <br /> We Seek</h3>
+                <h3 className="text-center md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8">Types of Partnerships <br /> We Seek</h3>
               </div>
             </div>
           {/* Types of Partner */}
