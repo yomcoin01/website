@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom"
 import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
 import { BtnCard, PreLoader } from "../../utils"
 import { Footer, Navbar, SubFooter } from "../components"
 import { useEffect, useState } from "react"
+import { FormLink } from "../../utils/Urlinks"
 
 
 
@@ -29,20 +31,23 @@ const HomePg = () => {
                 <img src={herobgleft} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 left-10 opacity-70 " />
                 <img src={herobgright} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 right-10 opacity-70 " />
             {/* </div> */}
-            <div className="text-center flex flex-col gap-10 items-center pt-12 md:pt-24 pb-12 z-50">
+            <div className="text-center flex flex-col gap-10 items-center pt-12 md:pt-24 pb-8 z-50">
               <p className="text-2xl md:text-5xl font-[700] w-3/4" data-aos="zoom-in-up">Bridging Finance and Technology for a Smarter Future</p>
             <p data-aos="zoom-in-up">Revolutionizing Cross-Border Transactions with Seamless, Secure, and Efficient Solutions</p>  
 
-            <div className="bg-[#909AA81A] flex flex-row gap-4 justify-between items-center  p-2 rounded-full" >
-            <div className="flex flex-row relative">
-                <img src={hero1} className="h-12 w-12 rounded-full " alt="" />
-                <img src={hero2} className="h-12 w-12 rounded-full z-10 absolute right-16" alt="" />
-                <img src={hero3} className="h-12 w-12 rounded-full z-20 absolute right-8"  alt="" />
-                <div className="bg-white text-center w-12 h-12 z-30 border-1 border-transparent flex flex-row items-center rounded-full">
-                    <p className="text-black text-center font-[600] ps-1 text-2xl">+23</p>
+            <div className="bg-[#909AA81A] flex md:w-80 w-72 relative flex-row gap-4 justify-between items-center  p-2 rounded-full" >
+            <div className="flex flex-row">
+                <img src={hero1} className="md:h-12 h-10 md:w-12 w-10 rounded-full left-2 top-2 absolute" alt="" />
+                <img src={hero2} className="md:h-12 h-10 md:w-12 w-10 rounded-full z-10 md:left-10 left-8 top-2 absolute right-16" alt="" />
+                <img src={hero3} className="md:h-12 h-10 md:w-12 w-10 rounded-full z-20 md:left-20 left-16 top-2 absolute right-8"  alt="" />
+                <div className="bg-white absolute text-center md:left-28 left-24 top-2 md:h-12 h-10 md:w-12 w-10 z-30 border-1 border-transparent flex flex-row items-center rounded-full">
+                    <p className="text-black text-center font-[600] ps-1 md:text-2xl text-xl">+23</p>
                 </div>
             </div>
-            <button className="bg-primary font-[600] text-[#fff] rounded-full py-3 px-6">Join Waitlist</button>
+            <Link to={FormLink} target="_blank">
+            <button className="bg-primary font-[600] text-[#fff] rounded-full py-2 md:py-3 px-4 md:px-6">Join Waitlist</button>
+            </Link>
+            
             </div>
             </div>
             
@@ -56,7 +61,7 @@ const HomePg = () => {
             {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
             <div className="flex flex-col justify-center items-center py-12 w-3/4 mx-auto gap-2 md:gap-4">
                 {/* <div className="w-3/4 text-center"> */}
-             <p >Why Yomcoin?</p>
+             <p className="text-primary font-[600] md:text-2xl text-xl">Why Yomcoin?</p>
 
              <p data-aos="fade-up" className="font-[700] text-2xl md:text-5xl text-center">Why We Stand Out Among Cryptocurrencies</p>
             {/* </div> */}
@@ -64,13 +69,13 @@ const HomePg = () => {
 
            <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-8 py-12 px-4 z-50">
             {WhyConst.map((item) => (
-             <div className="bg-transparent justify-start items-start flex flex-col gap-6 md:px-8 px-4 md:py-12 py-6 border border-e-cyan-300 rounded-xl h-[350px] md:h-[400px]" key={item.id}>
+             <div className="bg-transparent justify-start md:items-start items-center flex flex-col gap-6 md:px-8 px-4 md:py-12 py-6 border border-e-cyan-300 rounded-xl h-[350px] md:h-[400px]" key={item.id}>
                 <div>
                 <img src={item.img} alt="" className="md:w-24 w-16 md:h-24 h-16" />
                 </div>
                 
-                <h3 className="md:text-4xl text-2xl font-[600]">{item.title}</h3>
-                <p>{item.text}</p>
+                <h3 className="md:text-4xl text-2xl font-[600] text-center md:text-start">{item.title}</h3>
+                <p className="text-center md:text-start">{item.text}</p>
             </div>   
             ))}
             
@@ -90,25 +95,25 @@ const HomePg = () => {
                 {/* </div> */}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-8 py-16 px-4">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
                 <p className="text-second font-[700] text-5xl pb-2">.01</p>
-                <h3 className="text-3xl font-[700]">Decentralized Platform</h3>
-                <p>Yomcoin operates on a decentralized platform, ensuring transparency and reducing the risk of centralized control or manipulation.</p>
+                <h3 className="text-3xl font-[700] text-center md:text-start">Decentralized Platform</h3>
+                <p className="text-center md:text-start">Yomcoin operates on a decentralized platform, ensuring transparency and reducing the risk of centralized control or manipulation.</p>
             </div>
-            <div className="flex flex-col gap-3 md:pt-24 pt-0">
+            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start">
                 <p className="text-second font-[700] text-6xl pb-2">.02</p>
-                <h3 className="text-3xl font-[700]">User-Friendly Interface</h3>
-                <p>Our upcoming app will feature a user-friendly interface designed to make transactions easy, even for those new to cryptocurrency.</p>
+                <h3 className="text-3xl font-[700] text-center md:text-start">User-Friendly Interface</h3>
+                <p className="text-center md:text-start">Our upcoming app will feature a user-friendly interface designed to make transactions easy, even for those new to cryptocurrency.</p>
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 items-center md:items-start">
                 <p className="text-second font-[700] text-5xl pb-2">.03</p>
-                <h3 className="text-3xl font-[700]">Fast Transaction Speeds</h3>
-                <p>Leveraging advanced blockchain technology, Yomcoin provides near-instant transaction speeds, allowing you to send and receive funds quickly.</p>
+                <h3 className="text-3xl font-[700] text-center md:text-start">Fast Transaction Speeds</h3>
+                <p className="text-center md:text-start">Leveraging advanced blockchain technology, Yomcoin provides near-instant transaction speeds, allowing you to send and receive funds quickly.</p>
             </div>
-            <div className="flex flex-col gap-3 md:pt-24 pt-0">
+            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start">
                 <p className="text-second font-[700] text-5xl pb-2">.04</p>
-                <h3 className="text-3xl font-[700]">Low Transaction Fees</h3>
-                <p>Our platform is designed to offer some of the lowest transaction fees in the market, making cross-border payments affordable for everyone.</p>
+                <h3 className="text-3xl font-[700] text-center md:text-start">Low Transaction Fees</h3>
+                <p className="text-center md:text-start">Our platform is designed to offer some of the lowest transaction fees in the market, making cross-border payments affordable for everyone.</p>
             </div>
             </div>
         </div>
@@ -117,8 +122,8 @@ const HomePg = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8">
                 <div className="flex flex-col gap-4">
                     <p className="text-center md:text-start">Partnerships and collaborations</p>
-                    <h3 className="text-2xl md:text-5xl font-[700]">Why Partner with Yomcoin?</h3>
-                    <p>We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
+                    <h3 className="text-2xl md:text-5xl font-[700] text-center md:text-start">Why Partner with Yomcoin?</h3>
+                    <p className="text-center md:text-start">We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                     <div className="flex flex-row gap-4 items-center">
                     <BtnCard btnbgColor="primary" btnText="Join Us"  btnClass="" />
                     <BtnCard btnbgColor="transparent" btnText="Read More" btnClass="border border-white"/>

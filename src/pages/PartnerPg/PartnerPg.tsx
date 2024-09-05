@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Footer, Navbar, SubFooter } from "../components"
-import { heroPartOne, heroPartTwo, whyPartImg } from "../../assets"
+import { herobgleft, herobgright, heroPartOne, heroPartTwo, herotopbg, whyPartImg } from "../../assets"
 import { PreLoader } from "../../utils";
-import { FaAngleRight } from "react-icons/fa6";
+import { FaAngleRight, FaArrowLeftLong } from "react-icons/fa6";
 import { whyPartData } from "../../data/data";
 
 const PartnerPg = () => {
@@ -26,22 +26,36 @@ const PartnerPg = () => {
         <div>
         <Navbar />
         <div className="container pt-16">
-          
+        <img src={herotopbg} alt="" className=" md:w-60 w-24 md:h-60 h-24 absolute top-10 inset-x-1/2  opacity-50 " />
+                {/* <img src={herobgleft} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 left-10 opacity-70 " /> */}
+                <img src={herobgright} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 right-10 opacity-70 " />
             {/* <div className="w-full md:w-1/2 mx-auto">
                 <img src={underConstruction} alt="" className="w-full"/>
             </div>
             <p className="text-2xl md:text-5xl text-center">Under <span className="text-primary">Construction</span></p> */}
             <div>
-              <h3 className="text-4xl font-[700]">Partnership</h3>
-              <div className="flex flex-row items-center gap-2 justify-start py-6">
-                <p className="text-primary font-[600]">Home</p>
-                <FaAngleRight />
-                <p className="text-primary font-[600]">Partnership</p>
+              <h3 className="text-4xl font-[700] ">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+                Partnership
+                </span>
+                </h3>
+              <div className="">
+                <p className="text-2xl">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF] flex flex-row gap-4 items-center pt-2">
+                  Home <FaAngleRight fill="#fff" />Partnerships 
+                </span>
+                </p>
+                
+                
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-24">
                 <div>
-                  <p className="text-primary font-[600]">Partnership & Collaboration</p>
-                  <h3 className="text-start text-[48px] font-[700] py-8" style={{lineHeight: "50px"}}>Partner with Yomcoin to Innovate</h3>
+                  <p className="font-[600] text-xl">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+                  Partnership & Collaboration
+                  </span>
+                  </p>
+                  <h3 className="text-start md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8">Partner with Yomcoin to Innovate</h3>
                   <p className="text-txtCol font-[500]">Yomcoin is open to partnerships and collaborations with businesses to expand the Yomcoin ecosystem and provide greater value to our users. We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                 </div>
                 <div>
@@ -81,10 +95,10 @@ const PartnerPg = () => {
               </div>
               </div>
             </div>
-            <div className="py-12">
+            <div className="md:py-12 py-4">
               <p className="text-center">Partner</p>
               <div className="w-full md:w-1/2 mx-auto">
-                <h3 className="text-center text-[48px] font-[700]" style={{lineHeight: "50px"}}>Types of Partnerships <br /> We Seek</h3>
+                <h3 className="text-center md:text-[48px] text-[30px] font-[700] md:py-8 py-2 md:leading-[50px] leading-8" style={{lineHeight: "50px"}}>Types of Partnerships <br /> We Seek</h3>
               </div>
             </div>
           {/* Types of Partner */}

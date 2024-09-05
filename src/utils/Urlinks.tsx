@@ -1,0 +1,6 @@
+export const FormLink = "https://forms.gle/y46WMkypRmkLaQAe7"
+export const LinkedInUrl = "https://www.linkedin.com/company/yomcoin"
+export const FacebookUrl = "https://www.facebook.com/profile.php?id=61553383648825"
+export const InstagramUrl = "https://www.instagram.com/yomcoin?igsh=OGV4cjNhbTNxZGV1"
+export const DiscordUrl = "https://discord.com/invite/cZbTsKuy9Y"
+export const Xurl = "https://x.com/yomcoin01?t=4thERUk5OOxiTP9NdSpF-Q&s=09"

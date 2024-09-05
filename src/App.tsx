@@ -3,6 +3,7 @@ import { AboutPg, HomePg, PartnerPg } from './pages'
 import AOS from "aos"
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+import "./App.css";
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
         <Routes>
         <Route path='/' element={<HomePg />} />
         <Route path='/about' element={<AboutPg />} />
-        <Route path='/partner' element={<PartnerPg />} />
+        <Route path='/partnership' element={<PartnerPg />} />
       </Routes>
       </div>
       

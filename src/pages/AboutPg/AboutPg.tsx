@@ -1,5 +1,5 @@
 import { FaAngleRight } from "react-icons/fa";
-import { abtFirst, abtsecond} from "../../assets";
+import { abtFirst, abtsecond, herobgleft, herobgright, herotopbg} from "../../assets";
 import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components"
 import { useState, useEffect } from "react";
@@ -25,6 +25,9 @@ const AboutPg = () => {
         <div>
         <Navbar />
         <div className="container pt-16">
+        <img src={herotopbg} alt="" className=" md:w-60 w-24 md:h-60 h-24 absolute top-10 inset-x-1/2  opacity-50 " />
+                {/* <img src={herobgleft} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 left-10 opacity-70 " /> */}
+                <img src={herobgright} alt="" className=" md:w-48 w-16 md:h-48 h-16 absolute top-60 right-10 opacity-70 " />
         <h3 className="text-4xl font-[700]">About</h3>
               <div className="flex flex-row items-center gap-2 justify-start py-6">
                 <p className="text-primary font-[600]">Home</p>

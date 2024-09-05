@@ -1,6 +1,10 @@
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa6"
+import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaX, FaYoutube } from "react-icons/fa6"
 import { yomCoinPDF, yomlogo } from "../../assets"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faX} from "@fortawesome/free-solid-svg-icons";
+import {faFacebook} from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom"
+import { DiscordUrl, FacebookUrl, InstagramUrl, LinkedInUrl, Xurl } from "../../utils/Urlinks"
 
 
 const Footer = () => {
@@ -31,11 +35,29 @@ const Footer = () => {
                 </div> 
                 <p className="text-txtCol text-sm font-[500]">Yomcoin is a leading platform in the decentralized finance (DeFi) space, committed to driving innovation and positive change in the financial industry. Join us on our journey to transform the future of cross-border transactions.</p>
                 <div className="flex flex-row gap-3 justify-start items-center">
+                    <Link to={FacebookUrl} target="_blank">
+                    <i className="fa-brands fa-facebook"></i>
                     <FaFacebook  size={33}/>
-                    <FaTwitter size={33}/>
-                    <FaInstagram size={33} />
+                    </Link>
+                    
+                    <Link to={Xurl} target="_blank">
+                    <FaX size={33} fill="#000 #fff"/>
+                    </Link>
+                    <FontAwesomeIcon icon={faX}  inverse shake/>
+                    <FontAwesomeIcon icon={faFacebook} className="icon-color" />
+                    <Link to={InstagramUrl} target="_blank">
+
+                    <FaInstagram size={33} className=""  style={{backgroundColor: ""}}/>
+                    </Link>
+                    
+                    <Link to={LinkedInUrl} target="_blank">
                     <FaLinkedin size={33}/>
-                    <FaYoutube size={33}/>
+                    </Link>
+                    
+                    <Link to={DiscordUrl} target="_blank">
+                    <FaDiscord size={33}/>
+                    </Link>
+                    
                 </div>
                 </div>
                     <div className="flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-start">
