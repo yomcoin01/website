@@ -61,7 +61,11 @@ const HomePg = () => {
             {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
             <div className="flex flex-col justify-center items-center py-12 w-3/4 mx-auto gap-2 md:gap-4">
                 {/* <div className="w-3/4 text-center"> */}
-             <p className="text-primary font-[600] md:text-2xl text-xl">Why Yomcoin?</p>
+             <p className=" font-[600] md:text-2xl text-xl">
+             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+             Why Yomcoin?
+             </span>
+                </p>
 
              <p data-aos="fade-up" className="font-[700] text-2xl md:text-5xl text-center">Why We Stand Out Among Cryptocurrencies</p>
             {/* </div> */}
@@ -90,7 +94,11 @@ const HomePg = () => {
         <div className="container">
             <div className="flex flex-col justify-center items-center py-12 w-3/4 mx-auto gap-2 md:gap-4">
                 {/* <div className="w-full md:w-1/2 text-center"> */}
-                <p>Features</p>
+                <p className=" font-[600] md:text-2xl text-xl">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+                Features
+                </span>
+                    </p>
                 <p className="font-[700] text-2xl md:text-5xl text-center">Our Key Features</p>
                 {/* </div> */}
             </div>
@@ -121,7 +129,11 @@ const HomePg = () => {
         <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8">
                 <div className="flex flex-col gap-4">
-                    <p className="text-center md:text-start">Partnerships and collaborations</p>
+                    <p className="text-center md:text-start font-[600] md:text-2xl text-xl">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+                    Partnerships and collaborations
+                    </span>
+                        </p>
                     <h3 className="text-2xl md:text-5xl font-[700] text-center md:text-start">Why Partner with Yomcoin?</h3>
                     <p className="text-center md:text-start">We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                     <div className="flex flex-row gap-4 items-center">

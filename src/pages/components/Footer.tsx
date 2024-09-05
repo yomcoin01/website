@@ -1,4 +1,4 @@
-import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaX, FaYoutube } from "react-icons/fa6"
+import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin,  FaX } from "react-icons/fa6"
 import { yomCoinPDF, yomlogo } from "../../assets"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faX} from "@fortawesome/free-solid-svg-icons";

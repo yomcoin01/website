@@ -1,5 +1,5 @@
 import { FaAngleRight } from "react-icons/fa";
-import { abtFirst, abtsecond, herobgleft, herobgright, herotopbg} from "../../assets";
+import { abtFirst, abtsecond,  herobgright, herotopbg} from "../../assets";
 import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components"
 import { useState, useEffect } from "react";

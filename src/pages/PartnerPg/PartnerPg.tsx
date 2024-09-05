@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Footer, Navbar, SubFooter } from "../components"
-import { herobgleft, herobgright, heroPartOne, heroPartTwo, herotopbg, whyPartImg } from "../../assets"
+import { herobgright, heroPartOne, heroPartTwo, herotopbg, whyPartImg } from "../../assets"
 import { PreLoader } from "../../utils";
-import { FaAngleRight, FaArrowLeftLong } from "react-icons/fa6";
+import { FaAngleRight } from "react-icons/fa6";
 import { whyPartData } from "../../data/data";
 
 const PartnerPg = () => {
