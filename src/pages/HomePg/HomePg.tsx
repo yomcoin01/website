@@ -35,7 +35,7 @@ const HomePg = () => {
               <p className="text-2xl md:text-5xl font-[700] w-3/4" data-aos="zoom-in-up">Bridging Finance and Technology for a Smarter Future</p>
             <p data-aos="zoom-in-up">Revolutionizing Cross-Border Transactions with Seamless, Secure, and Efficient Solutions</p>  
 
-            <div className="bg-[#909AA81A] flex md:w-80 w-72 relative flex-row gap-4 justify-between items-center  p-2 rounded-full" >
+            <div className="bg-[#909AA81A] flex md:w-80 w-72 relative flex-row gap-4 justify-between items-center  p-2 rounded-full" data-aos="zoom-in">
             <div className="flex flex-row">
                 <img src={hero1} className="md:h-12 h-10 md:w-12 w-10 rounded-full left-2 top-2 absolute" alt="" />
                 <img src={hero2} className="md:h-12 h-10 md:w-12 w-10 rounded-full z-10 md:left-10 left-8 top-2 absolute right-16" alt="" />
@@ -61,7 +61,7 @@ const HomePg = () => {
             {/* <img src={sbgright} alt="" className="absolute right-0 top-20"/> */}
             <div className="flex flex-col justify-center items-center py-12 w-3/4 mx-auto gap-2 md:gap-4">
                 {/* <div className="w-3/4 text-center"> */}
-             <p className=" font-[600] md:text-2xl text-xl">
+             <p className=" font-[600] md:text-2xl text-xl" data-aos="fade-up">
              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
              Why Yomcoin?
              </span>
@@ -73,13 +73,13 @@ const HomePg = () => {
 
            <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-8 py-12 px-4 z-50">
             {WhyConst.map((item) => (
-             <div className="bg-transparent justify-start md:items-start items-center flex flex-col gap-6 md:px-8 px-4 md:py-12 py-6 border border-e-cyan-300 rounded-xl h-[350px] md:h-[400px]" key={item.id}>
+             <div className="bg-transparent justify-start md:items-start items-center flex flex-col gap-6 md:px-8 px-4 md:py-12 py-6 border border-e-cyan-300 rounded-xl h-[350px] md:h-[400px]" key={item.id} data-aos="zoom-in">
                 <div>
-                <img src={item.img} alt="" className="md:w-24 w-16 md:h-24 h-16" />
+                <img src={item.img} alt="" className="md:w-24 w-16 md:h-24 h-16" data-aos="fade-up" />
                 </div>
                 
-                <h3 className="md:text-4xl text-2xl font-[600] text-center md:text-start">{item.title}</h3>
-                <p className="text-center md:text-start">{item.text}</p>
+                <h3 className="md:text-4xl text-2xl font-[600] text-center md:text-start" data-aos="fade-up">{item.title}</h3>
+                <p className="text-center md:text-start" data-aos="fade-up">{item.text}</p>
             </div>   
             ))}
             
@@ -94,31 +94,31 @@ const HomePg = () => {
         <div className="container">
             <div className="flex flex-col justify-center items-center py-12 w-3/4 mx-auto gap-2 md:gap-4">
                 {/* <div className="w-full md:w-1/2 text-center"> */}
-                <p className=" font-[600] md:text-2xl text-xl">
+                <p className=" font-[600] md:text-2xl text-xl" data-aos="fade-up">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
                 Features
                 </span>
                     </p>
-                <p className="font-[700] text-2xl md:text-5xl text-center">Our Key Features</p>
+                <p className="font-[700] text-2xl md:text-5xl text-center" data-aos="fade-up">Our Key Features</p>
                 {/* </div> */}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-8 py-16 px-4">
-            <div className="flex flex-col gap-3 items-center md:items-start">
+            <div className="flex flex-col gap-3 items-center md:items-start" data-aos="fade-up">
                 <p className="text-second font-[700] text-5xl pb-2">.01</p>
                 <h3 className="text-3xl font-[700] text-center md:text-start">Decentralized Platform</h3>
                 <p className="text-center md:text-start">Yomcoin operates on a decentralized platform, ensuring transparency and reducing the risk of centralized control or manipulation.</p>
             </div>
-            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start">
+            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start" data-aos="fade-up">
                 <p className="text-second font-[700] text-6xl pb-2">.02</p>
                 <h3 className="text-3xl font-[700] text-center md:text-start">User-Friendly Interface</h3>
                 <p className="text-center md:text-start">Our upcoming app will feature a user-friendly interface designed to make transactions easy, even for those new to cryptocurrency.</p>
             </div>
-            <div className="flex flex-col gap-3 items-center md:items-start">
+            <div className="flex flex-col gap-3 items-center md:items-start" data-aos="fade-up">
                 <p className="text-second font-[700] text-5xl pb-2">.03</p>
                 <h3 className="text-3xl font-[700] text-center md:text-start">Fast Transaction Speeds</h3>
                 <p className="text-center md:text-start">Leveraging advanced blockchain technology, Yomcoin provides near-instant transaction speeds, allowing you to send and receive funds quickly.</p>
             </div>
-            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start">
+            <div className="flex flex-col gap-3 md:pt-24 pt-0 items-center md:items-start" data-aos="fade-up">
                 <p className="text-second font-[700] text-5xl pb-2">.04</p>
                 <h3 className="text-3xl font-[700] text-center md:text-start">Low Transaction Fees</h3>
                 <p className="text-center md:text-start">Our platform is designed to offer some of the lowest transaction fees in the market, making cross-border payments affordable for everyone.</p>
@@ -129,20 +129,20 @@ const HomePg = () => {
         <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-8">
                 <div className="flex flex-col gap-4">
-                    <p className="text-center md:text-start font-[600] md:text-2xl text-xl">
+                    <p className="text-center md:text-start font-[600] md:text-2xl text-xl" data-aos="fade-up">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
                     Partnerships and collaborations
                     </span>
                         </p>
-                    <h3 className="text-2xl md:text-5xl font-[700] text-center md:text-start">Why Partner with Yomcoin?</h3>
-                    <p className="text-center md:text-start">We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
+                    <h3 className="text-2xl md:text-5xl font-[700] text-center md:text-start" data-aos="fade-up">Why Partner with Yomcoin?</h3>
+                    <p className="text-center md:text-start" data-aos="fade-up">We believe that working together can help us achieve our goals more effectively. Whether you're a startup looking to integrate our technology or an established business seeking innovative payment solutions, we want to hear from you.</p>
                     <div className="flex flex-row gap-4 items-center">
                     <BtnCard btnbgColor="primary" btnText="Join Us"  btnClass="" />
-                    <BtnCard btnbgColor="transparent" btnText="Read More" btnClass="border border-white"/>
+                    <BtnCard btnbgColor="transparent" btnText="Read More" btnClass="border border-white" />
 
                     </div>
                 </div>
-                <div className="relative">
+                <div className="relative" data-aos="zoom-in">
           <img src={commside} alt=""  className="w-12 md:w-24 h-12 md:h-24 absolute -top-4 md:-top-10 -left-4 md:-left-10"/>
 
                     <img src={partColl} alt="" />
