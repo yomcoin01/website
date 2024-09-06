@@ -41,7 +41,7 @@ const HomePg = () => {
                 <img src={hero2} className="md:h-12 h-10 md:w-12 w-10 rounded-full z-10 md:left-10 left-8 top-2 absolute right-16" alt="" />
                 <img src={hero3} className="md:h-12 h-10 md:w-12 w-10 rounded-full z-20 md:left-20 left-16 top-2 absolute right-8"  alt="" />
                 <div className="bg-white absolute text-center md:left-28 left-24 top-2 md:h-12 h-10 md:w-12 w-10 z-30 border-1 border-transparent flex flex-row items-center rounded-full">
-                    <p className="text-black text-center font-[600] ps-1 md:text-xl text-lg">+30k</p>
+                    <p className="text-black text-center font-[600] ps-1 md:text-xl text-md">+30k</p>
                 </div>
             </div>
             <Link to={FormLink} target="_blank">
@@ -168,7 +168,7 @@ const HomePg = () => {
         </div> 
         </div> */}
         
-        <SubFooter title="Community and Support"/>
+        <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
         
         <Footer />
     </div>

@@ -30,7 +30,7 @@ const Footer = () => {
                     <img src={yomlogo} alt="" />
                     <p className="font-[800] text-2xl">Yomcoin</p>
                 </div> 
-                <p className="text-txtCol text-sm font-[500]">Yomcoin is a leading platform in the decentralized finance (DeFi) space, committed to driving innovation and positive change in the financial industry. Join us on our journey to transform the future of cross-border transactions.</p>
+                <p className="text-txtCol text-sm font-[600]">Yomcoin is a leading platform in the decentralized finance (DeFi) space, committed to driving innovation and positive change in the financial industry. Join us on our journey to transform the future of cross-border transactions.</p>
                 <div className="flex flex-row gap-3 justify-start items-center">
                     <Link to={FacebookUrl} target="_blank">
                     <FaFacebook  size={33} fill="#fff"/>
@@ -58,7 +58,7 @@ const Footer = () => {
                         <div><p className="font-[600] text-xl pb-0 md:pb-4">Company</p>
                         <ul>
                             {complinks.map((item, index) => (
-                                <li key={index} className="text-txtCol text-md font-[500]">{item}</li>
+                                <li key={index} className="text-txtCol text-md font-[600] cursor-pointer">{item}</li>
                             ))}
                         </ul>
                         </div>
@@ -66,7 +66,7 @@ const Footer = () => {
                         <div>
                             {reslinks.map((item, index) => (
                                 <div key={index}>
-                                    <Link to={item.link} target="_blank"  className="text-txtCol text-md font-[500]">{item.text}</Link>
+                                    <Link to={item.link} target="_blank"  className="text-txtCol text-md font-[600] cursor-pointer">{item.text}</Link>
                                 </div>
                                 
                             ))}

@@ -6,9 +6,10 @@ import { FormLink } from '../../utils/Urlinks'
 
 interface SubFootypes {
     title: String
+    subTitle: String
 }
 
-const SubFooter = ({title}: SubFootypes) => {
+const SubFooter = ({title, subTitle}: SubFootypes) => {
   return (
     <div className="container py-24 relative">
           <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl py-12">
@@ -18,7 +19,7 @@ const SubFooter = ({title}: SubFootypes) => {
                     <h3 className="md:text-5xl text-xl font-[700] md:ps-24 ps-0 text-center md:text-start">{title}</h3>
                 </div>
                 <div className="bg-transparent flex flex-col md:gap-3 gap-2" data-aos="fade-up">
-                    <p className='text-center md:text-start'>We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts.</p>
+                    <p className='text-center md:text-start font-[500]'>{subTitle}</p>
                     <div className='mx-auto md:mx-0'>
                         <Link to={FormLink} target='_blank'>
                             <button className="border-2 border-white font-[600] text-[#fff] rounded-full py-1 md:py-2 px-3 md:px-4 gap-2 items-center flex flex-row">Join Now <FaArrowAltCircleRight /> </button>   

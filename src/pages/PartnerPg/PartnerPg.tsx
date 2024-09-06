@@ -54,14 +54,14 @@ const PartnerPg = () => {
                 </span>
               </h3>
               <div className="">
-                <p className="md:text-2xl text-lg" data-aos="fade-up">
+                <p className="md:text-xl text-lg" data-aos="fade-up">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF] flex flex-row gap-4 items-center pt-2">
                     Home <FaAngleRight fill="#fff" />
                     Partnerships
                   </span>
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 pt-12 pb-24">
+              <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center md:gap-4 gap-0 md:pt-12 pt-4 pb-24">
                 <div>
                   <p className="font-[600] text-xl" data-aos="fade-up">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
@@ -71,7 +71,7 @@ const PartnerPg = () => {
                   <h3 className="text-start md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8" data-aos="fade-up">
                     Partner with Yomcoin to Innovate
                   </h3>
-                  <p className="text-txtCol font-[500]" data-aos="fade-up">
+                  <p className="text-txtCol font-[600]" data-aos="fade-up">
                     Yomcoin is open to partnerships and collaborations with
                     businesses to expand the Yomcoin ecosystem and provide
                     greater value to our users. We believe that working together
@@ -87,14 +87,14 @@ const PartnerPg = () => {
                       <img
                         src={heroPartOne}
                         alt=""
-                        className="md:absolute static md:z-20 z-0 w-[400px] h-[400px] "
+                        className="md:absolute static md:z-20 z-0 w-[400px] h-[400px] object-contain"
                         style={{ top: "-220px", left: "0px" }}
                         data-aos="zoom-in"
                       />
                       <img
                         src={heroPartTwo}
                         alt=""
-                        className="absolute md:block hidden right-0 w-[250px] h-[250px]"
+                        className="absolute md:block hidden right-0 w-[250px] h-[250px] object-contain"
                         data-aos="zoom-in"
                       />
                     </div>
@@ -107,7 +107,7 @@ const PartnerPg = () => {
             <div className="container">
               <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-4 ">
                 <div>
-                  <img src={whyPartImg} alt="" data-aos="zoom-in" />
+                  <img src={whyPartImg} alt="" data-aos="zoom-in" className="object-contain"/>
                 </div>
                 <div>
                   <p className="font-[600] text-xl" data-aos="fade-up">
@@ -115,10 +115,10 @@ const PartnerPg = () => {
                       Why Choose Us
                     </span>
                   </p>
-                  <h3 className="text-start md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8" data-aos="fade-up">
+                  <h3 className="text-start md:text-[48px] text-[30px] font-[700] md:py-8 py-2 md:leading-[50px] leading-8" data-aos="fade-up">
                     Why Partner with Yomcoin?
                   </h3>
-                  <p className="text-txtCol text-sm font-[500]" data-aos="fade-up">
+                  <p className="text-txtCol text-sm font-[600]" data-aos="fade-up">
                     Collaborate with us to drive mutual growth and success. Our
                     partnership approach is centered on innovation and shared
                     goals, ensuring that both parties benefit from the
@@ -138,7 +138,7 @@ const PartnerPg = () => {
                           <h3 className="text-xl pb-2 text-txtHead font-[700]">
                             {item.title}
                           </h3>
-                          <p className="text-txtCol text-xs font-[500]">
+                          <p className="text-txtCol text-xs font-[600]">
                             {item.text}
                           </p>
                         </div>
@@ -158,13 +158,13 @@ const PartnerPg = () => {
                   </span>
                 </p>
                 <div className="w-full md:w-1/2 mx-auto">
-                  <h3 className="text-center md:text-[48px] text-[30px] font-[700] py-8 md:leading-[50px] leading-8" data-aos="fade-up">
+                  <h3 className="text-center md:text-[48px] text-[30px] font-[700] md:py-8 py-2 md:leading-[50px] leading-8" data-aos="fade-up">
                     Types of Partnerships We Seek
                   </h3>
                 </div>
               </div>
               {/* Types of Partner */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-8 py-16 px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-start gap-8 md:py-16 py-4 px-4">
                 <div className="flex flex-col gap-3" data-aos="fade-up">
                   <p className="text-second font-[700] text-5xl pb-2">.01</p>
                   <h3 className="text-2xl font-[700]" >
@@ -209,7 +209,7 @@ const PartnerPg = () => {
               </div>
             </div>
           </div>
-          <SubFooter title="Interested in Partnering with Us?" />
+          <SubFooter title="Interested in Partnering with Us?" subTitle="We are excited to explore how we can work together to create a more efficient and connected financial world. If you are interested in partnering with Yomcoin, please reach out to us: info@yomcoin.com"/>
           <Footer />
         </div>
       )}
