@@ -24,3 +24,5 @@ export {default as yomCoinPDF} from "./yomCOIN WHITEPAPER.pdf";
 export {default as abtFirst} from "./abtfirst.png";
 export {default as abtsecond} from "./abtsecond.png";
 export {default as abtechbg} from "./abtechbg.png";
+export {default as contactImg} from "./contactimg.jpg";
+export {default as YomPitch} from "./www.yomcoin.com.pdf"

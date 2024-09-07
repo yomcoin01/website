@@ -1,5 +1,5 @@
 import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
-import { AboutPg, HomePg, PartnerPg } from './pages'
+import { AboutPg, ContactPg, HomePg, PartnerPg } from './pages'
 import AOS from "aos"
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
@@ -22,6 +22,7 @@ function App() {
         <Routes>
         <Route path='/' element={<HomePg />} />
         <Route path='/about' element={<AboutPg />} />
+        <Route path='/contact-us' element={<ContactPg />} />
         <Route path='/partnership' element={<PartnerPg />} />
       </Routes>
       </div>

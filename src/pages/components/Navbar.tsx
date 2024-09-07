@@ -24,6 +24,11 @@ const Navbar = () => {
             id: 3,
             text: "Partnerships",
             link: "/partnership"
+        },
+        {
+            id: 4,
+            text: "Contact",
+            link: "/contact-us"
         }
     ]
 

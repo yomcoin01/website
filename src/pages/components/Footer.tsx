@@ -1,5 +1,5 @@
 import { FaDiscord, FaFacebook, FaInstagram, FaLinkedin,  FaX } from "react-icons/fa6"
-import { yomCoinPDF, yomlogo } from "../../assets"
+import { yomCoinPDF, yomlogo, YomPitch } from "../../assets"
 import { Link } from "react-router-dom"
 import { DiscordUrl, FacebookUrl, InstagramUrl, LinkedInUrl, Xurl } from "../../utils/Urlinks"
 
@@ -11,7 +11,7 @@ const Footer = () => {
         {
             id: 1,
         text: "Pitch deck",
-        link: "/"
+        link: YomPitch
         },
         {
             id: 2,
