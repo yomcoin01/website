@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components";
-import { FaAngleRight, FaEnvelope } from "react-icons/fa6";
-import {SlEarphonesAlt} from "react-icons/sl"
-import { contactImg, herobgright, herotopbg } from "../../assets";
+import { FaAngleRight} from "react-icons/fa6";
+import { contactImg, herobgright, herotopbg, yomlogo } from "../../assets";
 
 
 const ContactPg = () => {
@@ -22,7 +21,7 @@ const ContactPg = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Yomcoin | Partnership";
+    document.title = "Yomcoin | Contact";
   }, []);
 
   const handleSubmit = () => {
@@ -57,85 +56,86 @@ const ContactPg = () => {
                   </span>
                 </p>
                 </div>
-                <div className="container">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 py-10">
-          <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border-2 border-primary rounded w-fit">
-              <SlEarphonesAlt size={30}/>
-            </div>
-            <p className="text-center font-[700]">+1 (234) 567-8901</p>
-            <p className="font-[600]">Mon - Sat: 8:00 - 21:00 (GMT-8)</p>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border-2 border-primary rounded w-fit">
-              <FaEnvelope size={30}/>
-            </div>
-            
-            <p className="text-center font-[700]">support@yomcoin.com</p>
-            <p className="font-[600]">24/7 Customer Support</p>
-          </div>
-          {/* <div className="flex flex-col justify-center items-center gap-2">
-            <div className="p-4 border-2 border-primary rounded w-fit">
-              <FaLocationDot size={30}/>
-            </div>
-            <p className="text-center font-[700]">Aberdeen Avenue, California, Santa Rosa, US</p>
-            <p className="font-[600]">Main Office Location</p>
-          </div> */}
-        </div>
+                <div className="container py-12">
+              <div className="w-full md:w-2/3 text-center flex flex-col gap-2 justify-center items-center mx-auto">
+              <img src={yomlogo} alt="" />
+              <h3 className="md:text-5xl text-3xl font-[700]">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#630460] to-[#AB79FF]">
+        Contact Our Friendly Team
+        </span>
+          
+          </h3>
+          <p className="font-[600] text-xl md:text-2xl">Let us know how we can help you</p>
+              </div>
         <div className="grid md:grid-cols-2 grid-cols-1 rounded-lg py-12 shadow-lg h-[600px] ">
-          <div className="h-[100%] hidden md:block">
-            <img src={contactImg} alt="" className="h-full object-cover" />
+          <div className="min-h-full hidden md:block">
+            <img src={contactImg} alt="" className="h-full w-full object-cover" />
           </div>
-          <form action="" className="w-full px-10 p-12" onSubmit={handleSubmit}>
-            <div className="flex flex-row gap-3 w-full justify-between align-middle">
-              <div className="flex flex-col gap-3">
-                <label htmlFor="">Your Full Name</label>
+          <form action="" className="w-ful bg-primary bg-opacity-50 rounded-tr-2xl md:px-10 px-0 p-12" onSubmit={handleSubmit}>
+            <div className="flex flex-row gap-4 w-full justify-center items-center">
+              <div className="flex flex-col gap-1 w-full">
+                <label className="font-[700] text-lg">Full Name</label>
                 <input
                   type="text"
-                  className="p-2 w-full rounded-lg border border-primary"
+                  className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                   value={name}
                   onChange={(e: any) => setName(e.target.value)}
                 />
               </div>
-              <div className="flex flex-col gap-3">
-                <label htmlFor="">Email Address</label>
+              <div className="flex flex-col gap-1 w-full">
+                <label className="font-[700] text-lg">Email Address</label>
                 <input
                   type="email"
-                  className="p-2 w-full rounded-lg border border-primary"
+                  className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                   value={email}
                   onChange={(e:any) => setEmail(e.target.value)}
                 />
               </div>
             </div>
 
-            <div className="flex flex-col py-4">
-              <label htmlFor="">Subject</label>
+            <div className="flex flex-col pt-2">
+              <label className="font-[700] text-lg">Company Name</label>
               <input
                 type="text"
-                className="p-2 w-full rounded-lg border border-primary"
+                className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                 value={subject}
                 onChange={(e:any) => setSubject(e.target.value)}
               />
             </div>
-            <div>
-              <label htmlFor="">Message</label>
+            <div className="flex flex-col pt-2 gap-1">
+              <label className="font-[700] text-lg">Subject</label>
+              <input
+                type="text"
+                className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
+                value={subject}
+                onChange={(e:any) => setSubject(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col pt-2 gap-1">
+              <label className="font-[700] text-lg">Message</label>
               <textarea
                 name=""
                 id=""
-                className="w-full border border-primary rounded-lg"
+                className="w-full border border-primary rounded-lg text-black font-[600] p-2"
                 cols={30}
                 rows={10}
                 value={message}
                 onChange={(e:any) => setMessage(e.target.value)}
               ></textarea>
             </div>
-            <button className="bg-primary rounded-xl py-2 px-4 text-lg">
+            <div className="pt-4">
+            <button className="bg-primary rounded-xl py-2 cursor-pointer w-full text-xl font-[600]">
               {loading ? "Sending" : "Send"}
-            </button>
+            </button>  
+            </div>
+            
           </form>
         </div>
                 </div>
+                <div className="pt-12">
                 <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
+
+                </div>
                 <Footer />
             </div>
         )}
