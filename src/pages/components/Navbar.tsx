@@ -45,7 +45,7 @@ const Navbar = () => {
                     <p className="font-[800] md:text-2xl text-lg">Yomcoin</p>
                 </Link>
                 <div className="md:hidden cursor-pointer flex items-center" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <FaTimes size={28}/> : <FaBars size={28}/>}
+                    {isOpen ? "" : <FaBars size={28}/>}
                 </div>
                 </div>
                 
