@@ -81,8 +81,8 @@ const ContactPg = () => {
           <div className="min-h-full hidden md:block">
             <img src={contactImg} alt="" className="h-full w-full object-cover" />
           </div>
-          <form action="" className="w-ful bg-primary bg-opacity-40 rounded-tr-2xl md:px-10 px-4 p-12" onSubmit={handleSubmit}>
-            <div className="flex flex-row gap-4 w-full justify-center items-center">
+          <form action="" className="w-ful bg-primary bg-opacity-40 md:rounded-tr-2xl rounded-2xl md:px-10 px-4 p-12" onSubmit={handleSubmit}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full justify-center items-center">
               <div className="flex flex-col gap-1 w-full">
                 <label className="font-[600] text-lg">Full Name</label>
                 <input
@@ -105,7 +105,7 @@ const ContactPg = () => {
               </div>
             </div>
 
-            <div className="flex flex-col pt-2">
+            <div className="flex flex-col pt-1 md:pt-2">
               <label className="font-[600] text-lg">Company Name</label>
               <input
                 type="text"
@@ -115,7 +115,7 @@ const ContactPg = () => {
                 required
               />
             </div>
-            <div className="flex flex-col pt-2 gap-1">
+            <div className="flex flex-col pt-1 md:pt-2 gap-1">
               <label className="font-[600] text-lg">Subject</label>
               <input
                 type="text"
@@ -125,7 +125,7 @@ const ContactPg = () => {
                 onChange={(e:any) => setSubject(e.target.value)}
               />
             </div>
-            <div className="flex flex-col pt-2 gap-1">
+            <div className="flex flex-col md:pt-2 pt-1 gap-1">
               <label className="font-[600] text-lg">Message</label>
               <textarea
                 name=""
@@ -148,7 +148,7 @@ const ContactPg = () => {
         </div>
                 </div>
                 <div className="pt-12">
-                <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
+                <SubFooter title="Get in touch with us" subTitle="We’re enthusiastic about the chance to collaborate and develop a more efficient, connected financial system. Don't hesitate to contact us at info@yomcoin.com for further conversations and potential opportunities to work together."/>
 
                 </div>
                 <Footer />
