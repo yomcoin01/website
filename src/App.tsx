@@ -2,6 +2,8 @@ import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router
 import { AboutPg, ContactPg, HomePg, PartnerPg } from './pages'
 import AOS from "aos"
 import "aos/dist/aos.css";
+import "react-toastify/dist/ReactToastify.css"
+import {ToastContainer} from "react-toastify"
 import { useEffect } from 'react';
 import "./App.css";
 
@@ -25,6 +27,7 @@ function App() {
         <Route path='/contact-us' element={<ContactPg />} />
         <Route path='/partnership' element={<PartnerPg />} />
       </Routes>
+      <ToastContainer />
       </div>
       
     )

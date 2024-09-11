@@ -2,7 +2,7 @@
 import { FaArrowAltCircleRight } from 'react-icons/fa'
 import { commside } from '../../assets'
 import { Link } from 'react-router-dom'
-import { FormLink } from '../../utils/Urlinks'
+import {Xurl } from '../../utils/Urlinks'
 
 interface SubFootypes {
     title: String
@@ -21,7 +21,7 @@ const SubFooter = ({title, subTitle}: SubFootypes) => {
                 <div className="bg-transparent flex flex-col md:gap-3 gap-2" data-aos="fade-up">
                     <p className='text-center md:text-start font-[500]'>{subTitle}</p>
                     <div className='mx-auto md:mx-0'>
-                        <Link to={FormLink} target='_blank'>
+                        <Link to={Xurl} target='_blank'>
                             <button className="border-2 border-white font-[600] text-[#fff] rounded-full py-1 md:py-2 px-3 md:px-4 gap-2 items-center flex flex-row">Join Now <FaArrowAltCircleRight /> </button>   
                         </Link>
                     </div>

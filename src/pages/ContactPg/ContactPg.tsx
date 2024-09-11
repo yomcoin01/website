@@ -3,6 +3,8 @@ import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components";
 import { FaAngleRight} from "react-icons/fa6";
 import { contactImg, herobgright, herotopbg, yomlogo } from "../../assets";
+import {toast} from "react-toastify";
+import { supabase } from "../../utils/supabaseClient";
 
 
 const ContactPg = () => {
@@ -11,8 +13,8 @@ const ContactPg = () => {
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("")
-
-    
+    const [companyName, setCompanyName] = useState("")
+    const [formLoading, setFormLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -24,11 +26,19 @@ const ContactPg = () => {
     document.title = "Yomcoin | Contact";
   }, []);
 
-  const handleSubmit = () => {
+  const handleSubmit = async(e: any) => {
+    e.preventDefault()
+    
     try {
-      
-    } catch (error) {
-      
+    setFormLoading(true);
+       await supabase.from("contacts").insert({id: 1, name, email, companyName, subject, message})
+
+      toast.success(`Message Received ${name}, Our Team will contact you soon`, {position: "bottom-left"})
+
+    } catch (error: any) {
+      toast.error(error, {position: "bottom-left"})
+    }finally{
+      setFormLoading(false);
     }
   }
 
@@ -71,48 +81,52 @@ const ContactPg = () => {
           <div className="min-h-full hidden md:block">
             <img src={contactImg} alt="" className="h-full w-full object-cover" />
           </div>
-          <form action="" className="w-ful bg-primary bg-opacity-50 rounded-tr-2xl md:px-10 px-0 p-12" onSubmit={handleSubmit}>
+          <form action="" className="w-ful bg-primary bg-opacity-40 rounded-tr-2xl md:px-10 px-4 p-12" onSubmit={handleSubmit}>
             <div className="flex flex-row gap-4 w-full justify-center items-center">
               <div className="flex flex-col gap-1 w-full">
-                <label className="font-[700] text-lg">Full Name</label>
+                <label className="font-[600] text-lg">Full Name</label>
                 <input
                   type="text"
                   className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                   value={name}
+                  required
                   onChange={(e: any) => setName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col gap-1 w-full">
-                <label className="font-[700] text-lg">Email Address</label>
+                <label className="font-[600] text-lg">Email Address</label>
                 <input
                   type="email"
                   className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                   value={email}
+                  required
                   onChange={(e:any) => setEmail(e.target.value)}
                 />
               </div>
             </div>
 
             <div className="flex flex-col pt-2">
-              <label className="font-[700] text-lg">Company Name</label>
+              <label className="font-[600] text-lg">Company Name</label>
+              <input
+                type="text"
+                className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
+                value={companyName}
+                onChange={(e:any) => setCompanyName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="flex flex-col pt-2 gap-1">
+              <label className="font-[600] text-lg">Subject</label>
               <input
                 type="text"
                 className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
                 value={subject}
+                required
                 onChange={(e:any) => setSubject(e.target.value)}
               />
             </div>
             <div className="flex flex-col pt-2 gap-1">
-              <label className="font-[700] text-lg">Subject</label>
-              <input
-                type="text"
-                className="p-2 w-full rounded-lg border border-primary text-black font-[600]"
-                value={subject}
-                onChange={(e:any) => setSubject(e.target.value)}
-              />
-            </div>
-            <div className="flex flex-col pt-2 gap-1">
-              <label className="font-[700] text-lg">Message</label>
+              <label className="font-[600] text-lg">Message</label>
               <textarea
                 name=""
                 id=""
@@ -120,12 +134,13 @@ const ContactPg = () => {
                 cols={30}
                 rows={10}
                 value={message}
+                required
                 onChange={(e:any) => setMessage(e.target.value)}
               ></textarea>
             </div>
             <div className="pt-4">
             <button className="bg-primary rounded-xl py-2 cursor-pointer w-full text-xl font-[600]">
-              {loading ? "Sending" : "Send"}
+              {formLoading ? "Sending..." : "Send"}
             </button>  
             </div>
             

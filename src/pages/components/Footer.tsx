@@ -19,7 +19,13 @@ const Footer = () => {
             link: yomCoinPDF
         }
     ]
-    const partlinks = ["Partner with us"]
+    const partlinks = [{
+        id:1,
+        text: "Partner with us",
+        link: "/contact-us"
+    },
+
+    ]
 
   return (
     <div>
@@ -75,7 +81,9 @@ const Footer = () => {
                         <div><p className="font-[600] text-xl pb-0 md:pb-4">Partnership</p>
                         <ul>
                             {partlinks.map((item, index) => (
-                                <Link target="_blank" to="https://forms.gle/y46WMkypRmkLaQAe7" key={index} className="text-txtCol text-md font-[500]">{item}</Link>
+                                <div key={index}>
+                                <Link to={item.link}className="text-txtCol text-md font-[500]">{item.text}</Link>
+                                </div>
                             ))}
                         </ul>
                         </div>
