@@ -15,8 +15,8 @@ const SubFooter = ({title, subTitle}: SubFootypes) => {
           <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl py-12">
           <img src={commside} alt=""  className="w-48 h-48 hidden md:block absolute top-24 -left-4"/>
             <div className="grid grid-cols-1 md:grid-cols-2 md:justify-between justify-center items-center bg-transparent md:gap-12 gap-4 px-8">
-                <div className="flex flex-row items-center gap-2 bg-transparent" data-aos="fade-up">
-                    <h3 className="md:text-5xl text-xl font-[700] md:ps-24 ps-0 text-center md:text-start">{title}</h3>
+                <div className="flex flex-row items-center text-center gap-2 bg-transparent mx-auto" data-aos="fade-up">
+                    <h3 className="md:text-5xl text-2xl font-[700] md:ps-24 ps-0 text-center md:text-start">{title}</h3>
                 </div>
                 <div className="bg-transparent flex flex-col md:gap-3 gap-2" data-aos="fade-up">
                     <p className='text-center md:text-start font-[500]'>{subTitle}</p>
