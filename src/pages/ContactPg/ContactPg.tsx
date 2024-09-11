@@ -81,7 +81,7 @@ const ContactPg = () => {
           <div className="min-h-full hidden md:block">
             <img src={contactImg} alt="" className="h-full w-full object-cover" />
           </div>
-          <form action="" className="w-ful bg-primary bg-opacity-40 md:rounded-tr-2xl rounded-2xl md:px-10 px-4 p-12" onSubmit={handleSubmit}>
+          <form action="" className="w-full bg-primary bg-opacity-40 md:rounded-tr-2xl rounded-2xl md:px-10 px-4 py-12" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full justify-center items-center">
               <div className="flex flex-col gap-1 w-full">
                 <label className="font-[600] text-lg">Full Name</label>
@@ -147,7 +147,7 @@ const ContactPg = () => {
           </form>
         </div>
                 </div>
-                <div className="pt-12">
+                <div className="pt-24">
                 <SubFooter title="Get in touch with us" subTitle="We’re enthusiastic about the chance to collaborate and develop a more efficient, connected financial system. Don't hesitate to contact us at info@yomcoin.com for further conversations and potential opportunities to work together."/>
 
                 </div>
