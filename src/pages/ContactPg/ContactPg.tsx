@@ -39,6 +39,11 @@ const ContactPg = () => {
       toast.error(error, {position: "bottom-left"})
     }finally{
       setFormLoading(false);
+      setName("")
+      setEmail("")
+      setCompanyName("")
+      setSubject("")
+      setMessage("")
     }
   }
 
