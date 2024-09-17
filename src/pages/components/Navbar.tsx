@@ -58,14 +58,14 @@ const Navbar = () => {
                 
             </div>  
             {/* Mobile Nav */}
-            <div className={`md:hidden bg-[#0E0D17] text-[#fff] fixed z-50 w-full top-0 overflow-y-auto bottom-0 pt-12 pl-4
-        duration-500 ${isOpen ? "left-0" : "left-[-100%]"}`}>
+            <div className={`md:hidden bg-[#0E0D17] text-[#fff] fixed z-50 w-full h-1/2 top-0 overflow-y-auto bottom-0 pt-12 pl-4
+        duration-500 ${isOpen ? "top-0" : "top-[-100%]"}`}>
 
         
             <div  className="cursor-pointer absolute right-10 flex items-center"><FaTimes size={28} onClick={() => setIsOpen(false)}/></div>
 
 
-            <div className="flex flex-col justify-center items-center pt-24 gap-8">
+            <div className="flex flex-col justify-center items-center pt-12 gap-8 mx-auto">
             {NavLinks.map((item) => (
                 <div key={item.id} >
                     <Link to={item.link} className="font-[600]">{item.text}</Link>

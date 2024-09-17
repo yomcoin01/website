@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Footer, Navbar, SubFooter } from "../components";
 import {
   herobgright,
@@ -7,28 +7,16 @@ import {
   herotopbg,
   whyPartImg,
 } from "../../assets";
-import { PreLoader } from "../../utils";
 import { FaAngleRight } from "react-icons/fa6";
 import { whyPartData } from "../../data/data";
 
 const PartnerPg = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
 
   useEffect(() => {
     document.title = "Yomcoin | Partnership";
   }, []);
 
   return (
-    <>
-      {loading ? (
-        <PreLoader />
-      ) : (
         <div>
           <Navbar />
           <div className="container pt-16">
@@ -212,8 +200,6 @@ const PartnerPg = () => {
           <SubFooter title="Interested in Partnering with Us?" subTitle="We are excited to explore how we can work together to create a more efficient and connected financial world. If you are interested in partnering with Yomcoin, please reach out to us: info@yomcoin.com"/>
           <Footer />
         </div>
-      )}
-    </>
   );
 };
 

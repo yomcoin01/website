@@ -1,27 +1,15 @@
 import { FaAngleRight } from "react-icons/fa";
 import { abtFirst, abtsecond,  herobgright, herotopbg} from "../../assets";
-import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components"
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 
 const AboutPg = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-      setTimeout(() => {
-        setLoading(false)
-      }, 2000)
-    }, [])
 
   useEffect(() => {
       document.title = "Yomcoin | About"
     }, [])
   return (
-    <>
-    {loading ? (
-        <PreLoader />
-    ): (
         <div>
         <Navbar />
         <div className="container pt-16">
@@ -91,8 +79,6 @@ const AboutPg = () => {
         <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
         <Footer />
     </div>
-    )}
-    </>
   )
 }
 

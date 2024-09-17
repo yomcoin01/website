@@ -1,29 +1,18 @@
 import { Link } from "react-router-dom"
 import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
-import { BtnCard, PreLoader } from "../../utils"
+import { BtnCard} from "../../utils"
 import { Footer, Navbar, SubFooter } from "../components"
-import { useEffect, useState } from "react"
-import { FormLink } from "../../utils/Urlinks"
+import { Xurl } from "../../utils/Urlinks"
 
 
 
 const HomePg = () => {
 
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        setTimeout(() => {
-          setLoading(false)
-        }, 2000)
-      }, [])
   return (
-    <>
-    {loading ? (
-        <PreLoader />
-    ):(
         <div>
-            <div className="md:h-screen h-fit">
+            <div className="h-fit">
             <Navbar />
         <div className="container">
             {/* <div className="absolute top-10 left-0"> */}
@@ -44,7 +33,7 @@ const HomePg = () => {
                     <p className="text-black text-center font-[600] ps-1 md:text-xl text-md">+30k</p>
                 </div>
             </div>
-            <Link to={FormLink} target="_blank">
+            <Link to={Xurl} target="_blank">
             <button className="bg-primary font-[600] text-[#fff] rounded-full py-2 md:py-3 px-4 md:px-6">Join Waitlist</button>
             </Link>
             
@@ -172,8 +161,6 @@ const HomePg = () => {
         
         <Footer />
     </div>
-    )}
-    </>
     
   )
 }

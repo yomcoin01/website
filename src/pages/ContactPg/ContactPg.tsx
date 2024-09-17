@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
-import { PreLoader } from "../../utils";
 import { Footer, Navbar, SubFooter } from "../components";
 import { FaAngleRight} from "react-icons/fa6";
+import {addDoc, collection} from "firebase/firestore";
 import { contactImg, herobgright, herotopbg, yomlogo } from "../../assets";
 import {toast} from "react-toastify";
-import { supabase } from "../../utils/supabaseClient";
+import { db } from "../../firebase";
 
 
 const ContactPg = () => {
-    const [loading, setLoading] = useState(true);
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
     const [subject, setSubject] = useState("");
@@ -16,11 +15,6 @@ const ContactPg = () => {
     const [companyName, setCompanyName] = useState("")
     const [formLoading, setFormLoading] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
 
   useEffect(() => {
     document.title = "Yomcoin | Contact";
@@ -31,7 +25,7 @@ const ContactPg = () => {
     
     try {
     setFormLoading(true);
-       await supabase.from("contacts").insert({id: 1, name, email, companyName, subject, message})
+      await addDoc(collection(db, "contact"), {name, email, companyName, subject, message})
 
       toast.success(`Message Received ${name}, Our Team will contact you soon`, {position: "bottom-left"})
 
@@ -48,10 +42,6 @@ const ContactPg = () => {
   }
 
   return (
-    <div>
-        {loading ? (
-            <PreLoader />
-        ): (
             <div>
                 <Navbar />
                 <div className="container pt-16">
@@ -86,7 +76,7 @@ const ContactPg = () => {
           <div className="min-h-full hidden md:block">
             <img src={contactImg} alt="" className="h-full w-full object-cover" />
           </div>
-          <form action="" className="w-full bg-primary bg-opacity-40 md:rounded-tr-2xl rounded-2xl md:px-10 px-4 py-12" onSubmit={handleSubmit}>
+          <form className="w-full bg-primary bg-opacity-40 md:rounded-tr-2xl rounded-2xl md:px-10 px-4 py-12" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full justify-center items-center">
               <div className="flex flex-col gap-1 w-full">
                 <label className="font-[600] text-lg">Full Name</label>
@@ -158,8 +148,6 @@ const ContactPg = () => {
                 </div>
                 <Footer />
             </div>
-        )}
-    </div>
   )
 }
 
