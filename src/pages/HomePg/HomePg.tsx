@@ -172,8 +172,8 @@ const HomePg = () => {
         <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
         
         <Footer />
-        {formModal && (<div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
-            <div className='w-80 rounded-xl bg-[#1f2937] flex flex-col justify-start items-start gap-8 py-6'>
+        {formModal && (<div className='fixed inset-0 bg-[#0E0D17] bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
+            <div className='w-80 rounded-xl bg-[#0E0D17] flex flex-col justify-start items-start gap-8 py-6'>
                 <div>
                     <p className="text-white font-[Jost] font-[600] text-xl text-center">
                     Welcome! Join our waitlist to get early access and updates.
@@ -191,7 +191,7 @@ const HomePg = () => {
                     </div>
                 </div>
                 <div className='flex justify-between items-center mx-auto gap-8'>
-                <button className='bg-transparent font-[600] font-[Jost] border-2 border-white px-4 py-2 rounded-xl' onClick={() => setFormModal(false)}>No</button>
+                <button className='bg-transparent font-[600] font-[Jost] border-2 border-white px-4 py-2 rounded-xl' onClick={() => setFormModal(false)}>Close</button>
                     <button className='bg-white text-[#1f2937] px-4 py-2 rounded-xl font-[600] font-[Jost] text-lg' onClick={handleSubmit}>{formSubmit ? "Submitting..." : "Submit"}</button>
                     
                 </div>
