@@ -1,14 +1,42 @@
-import { Link } from "react-router-dom"
+import { addDoc, collection } from "firebase/firestore"
 import { commside, hero1, hero2, hero3, herobgleft, herobgright, herotopbg, partColl} from "../../assets"
 import {  WhyConst } from "../../data/data"
 import { BtnCard} from "../../utils"
 import { Footer, Navbar, SubFooter } from "../components"
-import { Xurl } from "../../utils/Urlinks"
+import { useState } from "react"
+import { toast } from "react-toastify"
+import { db } from "../../firebase"
 
 
 
 const HomePg = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [formModal, setFormModal] = useState(false);
+    const [formSubmit, setFormSubmit] = useState(false);
 
+
+    const handleSubmit = async() => {
+        setFormSubmit(true)
+        try {
+            if(email == "" || name == ""){
+                toast.info("Kindly enter your full name and email address.", {position: "bottom-left"})
+                return;
+            }
+            await addDoc(collection(db, "waitlist"), {name, email})
+            toast.success("You're on the waitlist. We'll keep updated.", {position: "bottom-left"})
+            setEmail("")
+            setName("");
+            setFormSubmit(false)
+        } catch (error) {
+            toast.error("An Error Occured", {position: "bottom-left"})
+        } finally{
+            setEmail("");
+            setName("");
+            setFormModal(false);
+            setFormSubmit(false);
+        }
+    }
 
   return (
         <div>
@@ -33,9 +61,9 @@ const HomePg = () => {
                     <p className="text-black text-center font-[600] ps-1 md:text-xl text-md">+30k</p>
                 </div>
             </div>
-            <Link to={Xurl} target="_blank">
-            <button className="bg-primary font-[600] text-[#fff] rounded-full py-2 md:py-3 px-4 md:px-6">Join Waitlist</button>
-            </Link>
+            
+            <button className="bg-primary font-[600] text-[#fff] rounded-full py-2 md:py-3 px-4 md:px-6" onClick={() => setFormModal(true)}>Join Waitlist</button>
+            
             
             </div>
             </div>
@@ -140,26 +168,35 @@ const HomePg = () => {
         </div>
         </div>
         
-
-        {/* <div className="container py-24 relative">
-          <div className="bg-gradient-to-r from-[#DF4DDB] to-[#935DFA]  rounded-xl py-12">
-          <img src={commside} alt=""  className="w-24 h-24 absolute top-12 left-2"/>
-            <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center bg-transparent gap-12 px-8">
-                <div className="flex flex-row items-center gap-2 bg-transparent">
-                    
-                    <h3 className="text-5xl font-[700]">Community and Support</h3>
-                </div>
-                <div className="bg-transparent">
-                    <p>We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts.</p>
-                    <button className="flex flex-row gap-2 items-center">Join Now <FaArrowAltCircleRight /> </button>
-                </div>
-            </div>
-        </div> 
-        </div> */}
         
         <SubFooter title="Community and Support" subTitle="We value our community and are dedicated to providing excellent support. Join our growing community to stay informed, share feedback, and connect with other Yomcoin enthusiasts."/>
         
         <Footer />
+        {formModal && (<div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
+            <div className='w-80 rounded-xl bg-[#1f2937] flex flex-col justify-start items-start gap-8 py-6'>
+                <div>
+                    <p className="text-white font-[Jost] font-[600] text-xl text-center">
+                    Welcome! Join our waitlist to get early access and updates.
+                    </p>
+
+                </div>
+                <div className="flex flex-col gap-4 w-[80%] mx-auto">
+                    <div className="flex flex-col gap-1">
+                        <label className="text-lg font-[600] font-[Jost]">Full Name</label>
+                        <input type="text" className="rounded-xl w-full p-2 text-black font-[500] outline-primary" onChange={(e: any) => setName(e.target.value)}/>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                        <label className="text-lg font-[600] font-[Jost]">Email Address</label>
+                        <input type="email" className="rounded-xl w-full p-2 text-black font-[500] outline-primary" onChange={(e: any) => setEmail(e.target.value)}/>
+                    </div>
+                </div>
+                <div className='flex justify-between items-center mx-auto gap-8'>
+                <button className='bg-transparent font-[600] font-[Jost] border-2 border-white px-4 py-2 rounded-xl' onClick={() => setFormModal(false)}>No</button>
+                    <button className='bg-white text-[#1f2937] px-4 py-2 rounded-xl font-[600] font-[Jost] text-lg' onClick={handleSubmit}>{formSubmit ? "Submitting..." : "Submit"}</button>
+                    
+                </div>
+            </div>
+        </div>)}
     </div>
     
   )
