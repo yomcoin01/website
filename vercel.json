@@ -1,3 +1,4 @@
 {
+  "name": "yomcoin",
   "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
